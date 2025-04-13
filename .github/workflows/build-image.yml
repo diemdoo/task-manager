@@ -45,7 +45,7 @@ jobs:
         with:
           images: ghcr.io/${{ github.repository }}
           tags: |
-            type=semver,pattern={{version}}
+            type=semver,suffix=,format=short
           labels: |
             org.opencontainers.image.source=${{ github.repositoryUrl }}
             org.opencontainers.image.revision=${{ github.sha }}
@@ -59,7 +59,3 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          build-args: |
-            MY_VERSION=${{ steps.meta.outputs.version }}
-            BUILD_TIME=${{ steps.meta.outputs.created }}
-            GITREF=${{ github.sha }}
