@@ -11,17 +11,12 @@ Task Manager is a simple web application built with Flask, a Python web framewor
   - Passwords are securely hashed using `werkzeug.security` (using `pbkdf2:sha256`).
 
 - **Task Management**:
-  - Add a new task with a description (required, max 255 characters) and details (optional, max 100 characters).
-  - View a paginated list of your tasks (5 tasks per page).
+  - Add a new task.
   - Mark tasks as completed or uncompleted with a "Done/Undo" button.
   - Edit task details using an "Edit" button.
   - Delete individual tasks with a "Delete" button.
   - Clear all tasks with a "Clear All" button.
 
-- **User Interface**:
-  - Clean and intuitive design using Bootstrap 5 and custom CSS.
-  - Action buttons (Done, Edit, Delete) styled with Font Awesome icons for a modern look.
-  - Input validation to ensure the `details` field does not exceed 100 characters.
 
 ## Project Structure
 ```sh
@@ -52,8 +47,10 @@ task-manager/
 - **Frontend**:
   - Bootstrap 5: CSS framework for styling.
   - Font Awesome: For action button icons.
+- **Containerization**: Dockerfile and Docker Compose.
 - **Database**: PostgreSQL.
-- **Containerization**: Docker and Docker Compose.
+- **CI/CD**: Github Action.
+
 
 ## Setup Environment
 
